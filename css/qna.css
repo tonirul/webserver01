@@ -1,0 +1,60 @@
+/* Create four equal columns that floats next to each other */
+@media (max-width: 1600px){
+
+.qna_heading_bg{
+    background-color: black;
+    height: 10vh;
+    margin-bottom: 3px;
+    padding-top: 11px;
+    vertical-align: middle;
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+
+}
+
+.newspaper{
+  column-rule-style: solid;
+  column-rule-width: 1px;
+  column-rule-color: lightblue;
+}
+.column {
+    background-color: #000000 !important;
+    float: left;
+    width: 25%;
+    color: white;
+    padding: 10px;
+    margin-bottom: 3px;
+    height: 35vh; /* Should be removed. Only for demonstration */
+    
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+  /* Responsive layout - makes the four columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+        color: white;
+        background-color: teal !important;
+      width: 100%;
+      height: auto;
+    }
+
+    .qna_heading_sm{
+        background-color: teal;
+        height: 6vh;
+        margin-bottom: 3px;
+        padding-top: 6px;
+        vertical-align: middle;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+
+  }
